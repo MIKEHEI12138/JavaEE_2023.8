@@ -10,12 +10,13 @@ body {
 #sidebar {
     width: 20%; /* 设置侧栏的宽度为页面宽度的 20% */
     background-color: #f0f0f0; /* 设置侧栏的背景颜色 */
-    padding: 5px; /* 设置侧栏的内边距 */
+    padding: 0px; /* 设置侧栏的内边距 */
 }
 
 #main-content {
     width: 80%; /* 设置主内容区的宽度为页面宽度的 80% */
-    padding: 5px; /* 设置主内容区的内边距 */
+    padding: 0px; /* 设置主内容区的内边距 */
+    margin-left: 5px; /* 在主内容区的左侧添加5px的外边距 */
 }
 
 #top-bar {
@@ -25,6 +26,7 @@ body {
     align-items: center; /* 将顶部栏的内容垂直居中对齐 */
     padding: 10px 0; /* 设置顶部栏的内边距，上下各 10px */
     border-bottom: 1px solid #ccc; /* 在顶部栏底部添加 1px 灰色边框 */
+    margin-bottom: 5px; /* 在主内容区的左侧添加5px的外边距 */
 }
 
 #login-btn,
