@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京邮电大学餐饮评价系统</title>
+    <link rel="stylesheet" href="StyleForCES.css"> <!-- 这一行是用来调用StyleForCES.css文件的 -->
+</head>
+<body>
+<div id="sidebar">
+    <div id="navigation">
+        <div class="nav-option" onclick="toggleSublinks('学生食堂')">学生食堂</div>
+        <ul class="sublinks" id="sublinks-学生食堂">
+            <li><a href="#">一层</a></li>
+            <li><a href="#">二层</a></li>
+            <li><a href="#">三层</a></li>
+            <li><a href="#">四层</a></li>
+        </ul>
+        <div class="nav-option" onclick="toggleSublinks('综合食堂')">综合食堂</div>
+        <ul class="sublinks" id="sublinks-综合食堂">
+            <li><a href="#">一层</a></li>
+            <li><a href="#">二层</a></li>
+            <li><a href="#">三层</a></li>
+        </ul>
+        <div class="nav-option" onclick="toggleSublinks('风味餐厅')">风味餐厅</div>
+        <ul class="sublinks" id="sublinks-风味餐厅">
+            <li><a href="#">一层</a></li>
+        </ul>
+        <div class="nav-option" onclick="toggleSublinks('其它')">其它</div>
+        <ul class="sublinks" id="sublinks-其它">
+            <li><a href="#">麦当劳</a></li>
+            <li><a href="#">物美餐饮</a></li>
+        </ul>
+    </div>
+</div>
+<div id="main-content">
+    <div id="top-bar">
+        <h1>北京邮电大学餐饮评价系统</h1>
+        <input type="text" id="search-bar" placeholder="在这里搜索...">
+        <button id="login-btn">登录</button>
+        <button id="register-btn">注册</button>
+    </div>
+    <div id="image-gallery">
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+    </div>
+</div>
+
+<script>
+    function toggleSublinks(option) {
+        const sublinks = document.getElementById(`sublinks-${option}`);
+        if (sublinks.style.display === 'none') {
+            sublinks.style.display = 'block'; // 显示子选项
+        } else {
+            sublinks.style.display = 'none'; // 隐藏子选项
+        }
+    }
+</script>
+</body>
+</html>
