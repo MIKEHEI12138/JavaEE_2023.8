@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 示例网页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>JavaScript 示例网页</h1>
+
+<button id="changeColorBtn">点击我改变背景颜色</button>
+<p id="colorText">颜色将在此显示</p>
+
+<p>鼠标悬停在下面的文本上查看提示：</p>
+<p title="这是一个提示文本">悬停在我上面</p>
+
+<input type="text" id="nameInput" placeholder="在此输入你的名字">
+<button id="greetBtn">点击我问候</button>
+<p id="greetingText"></p>
+
+<script>
+    // 改变背景颜色的按钮点击事件
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    const colorText = document.getElementById('colorText');
+    const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+    let colorIndex = 0;
+
+    changeColorBtn.addEventListener('click', () => {
+        document.body.style.backgroundColor = colors[colorIndex];
+        colorText.textContent = `背景颜色已变为：${colors[colorIndex]}`;
+        colorIndex = (colorIndex + 1) % colors.length;
+    });
+
+    // 问候按钮点击事件
+    const greetBtn = document.getElementById('greetBtn');
+    const nameInput = document.getElementById('nameInput');
+    const greetingText = document.getElementById('greetingText');
+
+    greetBtn.addEventListener('click', () => {
+        const name = nameInput.value;
+        if (name) {
+            greetingText.textContent = `你好，${name}！欢迎来到示例网页。`;
+        } else {
+            greetingText.textContent = '请输入你的名字。';
+        }
+    });
+</script>
+</body>
+</html>

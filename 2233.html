@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品列表示例</title>
+</head>
+<body>
+<h1>产品列表</h1>
+
+<div id="productList">
+    <div class="product">
+        <h2>产品 A</h2>
+        <p>这是产品 A 的描述。</p>
+        <button class="addToCartBtn">添加到购物车</button>
+    </div>
+
+    <div class="product">
+        <h2>产品 B</h2>
+        <p>这是产品 B 的描述。</p>
+        <button class="addToCartBtn">添加到购物车</button>
+    </div>
+</div>
+
+<h2>购物车</h2>
+<ul id="cart">
+    <li>购物车是空的。</li>
+</ul>
+
+<script>
+    const addToCartBtns = document.querySelectorAll('.addToCartBtn');
+    const cartList = document.getElementById('cart');
+
+    addToCartBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.parentElement.querySelector('h2').textContent;
+            const cartItem = document.createElement('li');
+            cartItem.textContent = `${productName} 已添加到购物车。`;
+            cartList.appendChild(cartItem);
+        });
+    });
+</script>
+</body>
+</html>
