@@ -25,6 +25,7 @@
         }
 
         #top-bar {
+            background-color: #a5f0f0;
             display: flex; /* 使用弹性布局，将顶部栏的内容水平排列 */
             justify-content: space-between; /* 将顶部栏的内容分散对齐，左右对齐 */
             align-items: center; /* 将顶部栏的内容垂直居中对齐 */
@@ -44,21 +45,27 @@
         #image-gallery {
             display: flex; /* 使用弹性布局，将图片按行排列 */
             flex-wrap: wrap; /* 当图片超出容器宽度时，换行显示 */
-            gap: 20px; /* 设置图片之间的间隔为 20px */
+            gap: 5px; /* 设置图片之间的间隔为 5px */
             overflow-y: scroll; /* 如果图片高度超过容器高度，添加垂直滚动条 */
             max-height: 500px; /* 设置图片容器的最大高度为 500px */
         }
 
         .image {
-            width: calc(33.33% - 20px); /* 设置每张图片的宽度为容器宽度的三分之一减去间隔 */
-            height: 200px; /* 设置每张图片的高度为 200px */
-            background-color: #ddd; /* 设置图片的背景颜色为灰色 */
+            width: calc(25% - 5px);
+            background-color: #ddd;
+            position: relative; /* 添加相对定位，以便定位内部填充区域 */
+        }
+
+        .image::before { /*这段GPT解释的,没怎么看懂*/
+            content: ""; /* 创建一个伪元素，用于添加填充区域 */
+            display: block;
+            padding-bottom: 150%; /* 将高度设置为宽度的两倍 */
         }
 
         #navigation {
             display: flex; /* 使用弹性布局，将导航选项按列排列 */
             flex-direction: column; /* 设置排列方向为垂直列 */
-            gap: 10px; /* 设置导航选项之间的间隔为 10px */
+            gap: 0px; /* 设置导航选项之间的间隔为 0px */
         }
 
         .nav-option {
@@ -67,13 +74,13 @@
         }
 
         .sublinks {
-            margin-left: 15px; /* 设置子链接的左侧外边距为 15px */
+            margin-left: 0px; /* 设置子链接的左侧外边距为 10px */
             list-style: none; /* 去除子链接列表的默认样式 */
             padding: 0; /* 去除子链接列表的内边距 */
         }
 
         .sublinks li {
-            margin-top: 5px; /* 设置子链接之间的上方间距为 5px */
+            margin-top: 0px; /* 设置子链接之间的上方间距为 5px */
         }
 
         .sublinks a {
@@ -112,11 +119,14 @@
 </div>
 <div id="main-content">
     <div id="top-bar">
-        <h1>网页标题</h1>
+        <h1>北京邮电大学餐饮评价系统</h1>
+        <input type="text" id="search-bar" placeholder="在这里搜索...">
         <button id="login-btn">登录</button>
         <button id="register-btn">注册</button>
     </div>
     <div id="image-gallery">
+        <div class="image"></div>
+        <div class="image"></div>
         <div class="image"></div>
         <div class="image"></div>
         <div class="image"></div>
