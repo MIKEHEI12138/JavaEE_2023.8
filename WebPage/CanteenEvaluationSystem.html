@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>静态网页示例</title>
+    <title>北京邮电大学餐饮评价系统</title>
     <style>
         /* 这是一个多行注释，可以用于添加关于CSS部分的说明 */
 
@@ -86,23 +86,27 @@
 <body>
 <div id="sidebar">
     <div id="navigation">
-        <div class="nav-option">甲</div>
-        <ul class="sublinks">
-            <li><a href="#">A</a></li>
-            <li><a href="#">B</a></li>
-            <li><a href="#">C</a></li>
+        <div class="nav-option" onclick="toggleSublinks('学生食堂')">学生食堂</div>
+        <ul class="sublinks" id="sublinks-学生食堂">
+            <li><a href="#">一层</a></li>
+            <li><a href="#">二层</a></li>
+            <li><a href="#">三层</a></li>
+            <li><a href="#">四层</a></li>
         </ul>
-        <div class="nav-option">乙</div>
-        <ul class="sublinks">
-            <li><a href="#">A</a></li>
-            <li><a href="#">B</a></li>
-            <li><a href="#">C</a></li>
+        <div class="nav-option" onclick="toggleSublinks('综合食堂')">综合食堂</div>
+        <ul class="sublinks" id="sublinks-综合食堂">
+            <li><a href="#">一层</a></li>
+            <li><a href="#">二层</a></li>
+            <li><a href="#">三层</a></li>
         </ul>
-        <div class="nav-option">丙</div>
-        <ul class="sublinks">
-            <li><a href="#">A</a></li>
-            <li><a href="#">B</a></li>
-            <li><a href="#">C</a></li>
+        <div class="nav-option" onclick="toggleSublinks('风味餐厅')">风味餐厅</div>
+        <ul class="sublinks" id="sublinks-风味餐厅">
+            <li><a href="#">一层</a></li>
+        </ul>
+        <div class="nav-option" onclick="toggleSublinks('其它')">其它</div>
+        <ul class="sublinks" id="sublinks-其它">
+            <li><a href="#">麦当劳</a></li>
+            <li><a href="#">物美餐饮</a></li>
         </ul>
     </div>
 </div>
@@ -121,5 +125,17 @@
         <div class="image"></div>
     </div>
 </div>
+
+<script>
+    function toggleSublinks(option) {
+        const sublinks = document.getElementById(`sublinks-${option}`);
+        if (sublinks.style.display === 'none') {
+            sublinks.style.display = 'block'; // 显示子选项
+        } else {
+            sublinks.style.display = 'none'; // 隐藏子选项
+        }
+    }
+</script>
+
 </body>
 </html>
