@@ -24,7 +24,7 @@ body {
 }
 
 #top-bar {
-    background-color: #a5f0f0;
+    background-color: #00ff00;
     display: flex; /* 使用弹性布局，将顶部栏的内容水平排列 */
     height: 15vh;
     justify-content: space-between; /* 将顶部栏的内容分散对齐，左右对齐 */
@@ -122,19 +122,19 @@ body {
 
 /* 鼠标悬停时导航选项的背景颜色变化 */
 .nav-option:hover {
-    background-color: #eee; /* 更改背景颜色 */
+    background-color: #9797ff; /* 更改背景颜色 */
 }
 
 /* 鼠标悬停时子链接的背景颜色变化 */
 .sublinks a:hover {
-    background-color: #eee; /* 更改背景颜色 */
+    background-color: #aa22cc; /* 更改背景颜色 */
 }
 
 /* 设置不同层级的子链接的不同背景颜色 */
 .sublinks:nth-child(odd) a {
-    background-color: #f0f0f0; /* 浅灰色背景 */
+    background-color: #ff9797; /* 浅灰色背景 */
 }
 
 .sublinks:nth-child(even) a {
-    background-color: #e0e0e0; /* 更深的灰色背景 */
+    background-color: #a5f0f0; /* 更深的灰色背景 */
 }
