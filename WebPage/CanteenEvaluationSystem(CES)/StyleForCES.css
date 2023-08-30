@@ -52,13 +52,13 @@ body {
     }
 
     .image {
-        height: 242px;
-        width: 194px;
+        height: 400px;
+        width: 300px;
         background-color: #ddd;
         position: relative;
         display: flex;
-        flex-direction: column; /* 设置图片容器为纵向排列 */
-        justify-content: space-between; /* 在容器内底部留出空间 */
+        flex-direction: column;
+        justify-content: space-between;
         align-items: flex-start;
         overflow: hidden;
     }
@@ -73,8 +73,19 @@ body {
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
-        width: 100%; /* 使描述容器与图片宽度相同 */
-        box-sizing: border-box; /* 计算内边距和边框在总宽度内 */
+        width: 100%;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif; /* 自定义字体 */
+        font-size: 14px; /* 自定义字体大小 */
+    }
+
+    /* 自定义描述容器样式 */
+    .custom-description {
+        background-color: #3498db; /* 自定义背景颜色 */
+        color: #fff; /* 自定义文字颜色 */
+        font-size: 16px;
+        padding: 15px;
+        font-family: 'Helvetica', sans-serif;
     }
 
 
