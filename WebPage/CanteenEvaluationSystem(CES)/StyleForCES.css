@@ -43,25 +43,40 @@ body {
     cursor: pointer; /* 将鼠标悬停在按钮上时显示手型光标 */
 }
 
-#image-gallery {
-    display: flex; /* 使用弹性布局，将图片按行排列 */
-    flex-wrap: wrap; /* 当图片超出容器宽度时，换行显示 */
-    gap: 5px; /* 设置图片之间的间隔为 5px */
-    overflow-y: scroll; /* 如果图片高度超过容器高度，添加垂直滚动条 */
-    height: 80vh
-}
+    #image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        overflow-y: scroll;
+        height: 80vh;
+    }
 
-.image {
-    width: calc(25% - 5px);
-    background-color: #ddd;
-    position: relative; /* 添加相对定位，以便定位内部填充区域 */
-}
+    .image {
+        height: 242px;
+        width: 194px;
+        background-color: #ddd;
+        position: relative;
+        display: flex;
+        flex-direction: column; /* 设置图片容器为纵向排列 */
+        justify-content: space-between; /* 在容器内底部留出空间 */
+        align-items: flex-start;
+        overflow: hidden;
+    }
 
-.image::before { /*这段GPT解释的,没怎么看懂*/
-    content: ""; /* 创建一个伪元素，用于添加填充区域 */
-    display: block;
-    padding-bottom: 150%; /* 将高度设置为宽度的两倍 */
-}
+    .image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .image-description {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        width: 100%; /* 使描述容器与图片宽度相同 */
+        box-sizing: border-box; /* 计算内边距和边框在总宽度内 */
+    }
+
 
 #navigation {
     display: flex;
