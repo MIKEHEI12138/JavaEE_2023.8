@@ -120,8 +120,12 @@ body {
     padding: 5px; /* 添加内边距以增加点击区域 */
 }
 
-/* 鼠标悬停时导航选项和子链接的背景颜色变化 */
-.nav-option:hover,
+/* 鼠标悬停时导航选项的背景颜色变化 */
+.nav-option:hover {
+    background-color: #eee; /* 更改背景颜色 */
+}
+
+/* 鼠标悬停时子链接的背景颜色变化 */
 .sublinks a:hover {
     background-color: #eee; /* 更改背景颜色 */
 }
