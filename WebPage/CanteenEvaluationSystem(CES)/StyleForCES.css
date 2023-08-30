@@ -14,7 +14,7 @@ body {
     height: 100vh; /* 设置侧栏高度为视口高度 */
     background-color: #f0f0f0; /* 设置侧栏的背景颜色 */
     padding: 0; /* 设置侧栏的内边距 */
-    overflow-y: auto; /* 添加垂直滚动条，以防止内容溢出时出现滚动条 */
+    /* overflow-y: auto; 添加垂直滚动条，以防止内容溢出时出现滚动条 */
 }
 
 #main-content {
@@ -26,6 +26,7 @@ body {
 #top-bar {
     background-color: #a5f0f0;
     display: flex; /* 使用弹性布局，将顶部栏的内容水平排列 */
+    height: 15vh;
     justify-content: space-between; /* 将顶部栏的内容分散对齐，左右对齐 */
     align-items: center; /* 将顶部栏的内容垂直居中对齐 */
     padding: 10px 0; /* 设置顶部栏的内边距，上下各 10px */
@@ -47,7 +48,7 @@ body {
     flex-wrap: wrap; /* 当图片超出容器宽度时，换行显示 */
     gap: 5px; /* 设置图片之间的间隔为 5px */
     overflow-y: scroll; /* 如果图片高度超过容器高度，添加垂直滚动条 */
-    max-height: 500px; /* 设置图片容器的最大高度为 500px */
+    height: 80vh
 }
 
 .image {
