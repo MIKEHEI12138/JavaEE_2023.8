@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8" />
+    <title>管理员系统</title>
+    <!--是排版-->
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!--是颜色-->
+    <link href="./static/css/style.css" rel="stylesheet" type="text/css" />
+    <!--又是排版-->
+    <link href="./static/css/style-responsive.css" rel="stylesheet" type="text/css" />
+    <!--是左侧颜色-->
+    <link href="./static/css/default.css" rel="stylesheet" type="text/css" id="style_color" />
+</head>
+
+<body class="page-header-fixed">
+
+    <div class="header navbar navbar-inverse navbar-fixed-top">
+        <div class="header-inner">
+            <!--返回首页-->
+            <a class="navbar-brand" href="index.html">
+                首页
+                <!--可以换成图片logo-->
+            </a>
+            <!--右侧内容-->
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown user">
+                    <!--头像和名称-->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                        data-close-others="true">
+                        <img alt="" src="./static/img/avatar1_small.jpg" />
+                        <span class="username">尊敬的管理</span>
+                    </a>
+                    <!--下滑菜单-->
+                    <ul class="dropdown-menu">
+                        <li><a href="extra_profile.html"><i class="fa fa-user"></i>修改个人信息</a></li>
+                        <li><a href="login.html"><i class="fa fa-key"></i> 退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="page-sidebar navbar-collapse collapse">
+            <!--左侧选择栏-->
+            <ul class="page-sidebar-menu">
+                <!--首页-->
+                <li class="">
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <span class="title">首页</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
+                <!--学员-->
+                </li>
+                <li class="start active">
+                    <a href="admin_student.html">
+                        <i class="fa fa-table"></i>
+                        <span class="title">学员管理</span>
+                        <span class="arrow "></span>
+                    </a>
+                </li>
+                <!--档口-->
+                <li class="">
+                    <a href="admin_foodstall.html">
+                        <i class="fa fa-bookmark-o"></i>
+                        <span class="title">档口管理</span>
+                        <span class="arrow "></span>
+                    </a>
+                </li>
+                <!--食堂-->
+                <li class="">
+                    <a href="">
+                        <i class="fa fa-table"></i>
+                        <span class="title">食堂管理</span>
+                        <span class="arrow "></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="page-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h5 class="page-title">
+                        食堂评分<small>管理系统</small>
+                    </h5>
+                </div>
+
+                <div>
+                    <form class="sidebar-search" action="extra_search.html" method="POST">
+                        <div class="form-container">
+                            <div class="input-box">
+                                <a href="javascript:;" class="remove"></a>
+                                <input type="text" placeholder="搜索..." />
+                                <input type="button" class="submit" value=" " />
+                            </div>
+                        </div>
+                    </form>
+                    <br><br><br><br>
+                    <table class='table table-striped'>
+                        <tr>
+                            <th>学生编号</th>
+                            <th>学生年级</th>
+                            <th>学生名字</th>
+                            <th>性别</th>
+                            <th>学号</th>
+                            <th>操作</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2018</td>
+                                <td>张三</td>
+                                <td>M</td>
+                                <td>2018001</td>
+                                <td><a href="">删除</a>,<a href="">修改信息</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2018</td>
+                                <td>李四</td>
+                                <td>M</td>
+                                <td>2018002</td>
+                                <td><a href="">删除</a>,<a href="">修改信息</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2018</td>
+                                <td>王五</td>
+                                <td>M</td>
+                                <td>2018003</td>
+                                <td><a href="">删除</a>,<a href="">修改信息</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-inner">
+                Design by lyq
+            </div>
+            <div class="footer-tools">
+                <span class="go-top">
+                    <i class="fa fa-angle-up"></i>
+                </span>
+            </div>
+        </div>
+
+</body>
+
+</html>
