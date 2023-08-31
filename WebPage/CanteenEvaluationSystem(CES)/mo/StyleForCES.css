@@ -95,6 +95,12 @@ body {
     font-family: 'Helvetica', sans-serif;
 }
 
+#currentDateTime {
+    font-size: 20px; /* 修改字体大小 */
+    color: whitesmoke; /* 修改字体颜色 */
+    font-family: Arial, sans-serif; /* 修改字体 */
+    padding: 5px;
+}
 
 #navigation {
     display: flex;
