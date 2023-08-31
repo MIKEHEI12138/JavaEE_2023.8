@@ -6,7 +6,7 @@ body {
     margin: 0; /* 去除页面默认的外边距 */
     display: flex; /* 使用弹性布局 */
     flex-direction: row; /* 将主体内容水平排列 */
-    background-color: #ffff00;
+    background-color: #e0e0e0;
 }
 
 #sidebar {
@@ -227,6 +227,15 @@ body {
     padding: 8px 15px;
     background-color: #e02222;
     color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pagination span {
+    padding: 8px 15px;
+    background-color: #e0e0e0;
+    color: black;
     border: none;
     cursor: pointer;
     font-size: 14px;
