@@ -106,12 +106,12 @@ body {
     flex-wrap: wrap;
     gap: 5px;
     overflow-y: scroll;
-    height: 80vh;
+    height: auto;
 }
 
 .image {
-    height: 400px;
-    width: 300px;
+    height: auto;
+    width: calc(25% - 5px);
     background-color: #ddd;
     position: relative;
     display: flex;
