@@ -101,41 +101,47 @@ body {
     cursor: pointer; /* 将鼠标悬停在按钮上时显示手型光标 */
 }
 
-#image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    overflow-y: scroll;
-    height: auto;
-}
+    #image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        overflow-y: scroll;
+        height: auto;
+    }
 
-.image {
-    height: auto;
-    width: calc(25% - 5px);
-    background-color: #ddd;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    overflow: hidden;
-}
+    .image {
+        height: auto;
+        width: calc(25% - 5px);
+        background-color: #ddd;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+        transition: transform 0.3s ease; /* 添加过渡效果 */
+    }
 
-.image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
+    .image:hover {
+        transform: scale(1.01); /* 鼠标悬浮时放大图片 */
+    }
 
-.image-description {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif; /* 自定义字体 */
-    font-size: 14px; /* 自定义字体大小 */
-}
+    .image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .image-description {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif; /* 自定义字体 */
+        font-size: 14px; /* 自定义字体大小 */
+    }
+
 
 /* 自定义描述容器样式 */
 .custom-description {
