@@ -24,21 +24,73 @@ body {
     margin-left: 5px; /* 在主内容区的左侧添加5px的外边距 */
 }
 
-#top-bar {
-    background-color: #212121;
-    color: #ff9797;
+    #top-bar {
+        background-color: #212121;
+        color: #ff9797;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 5px;
+        font-family: "楷体", sans-serif;
+        font-size: 20px;
+    }
 
-    display: flex; /* 使用弹性布局，将顶部栏的内容水平排列 */
-    height: 15vh;
-    justify-content: space-between; /* 将顶部栏的内容分散对齐，左右对齐 */
-    align-items: center; /* 将顶部栏的内容垂直居中对齐 */
-    padding: 10px 0; /* 设置顶部栏的内边距，上下各 10px */
-    border-bottom: 1px solid #ccc; /* 在顶部栏底部添加 1px 灰色边框 */
-    margin-bottom: 5px; /* 在主内容区的左侧添加5px的外边距 */
+    .topbar-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-    font-family: "楷体", sans-serif; /* 使用宋体字体 */
-    font-size: 20px; /* 调整字体大小为16px，根据需要进行调整 */
-}
+    .topbar-left img {
+        max-height: 50px;
+    }
+
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .login-register {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .login-register button {
+        padding: 5px 10px;
+        background-color: #e02222;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .search-bar input[type="text"] {
+        padding: 10px; /* 修改 padding 值来调整输入框的大小 */
+        border: 1px solid #ccc;
+        width: 400px; /* 修改 width 值来调整输入框的宽度 */
+    }
+
+    .search-bar button {
+        padding: 10px 10px;
+        background-color: #e02222;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* ... 其他样式 ... */
+
+
 
 
 #login-btn,
