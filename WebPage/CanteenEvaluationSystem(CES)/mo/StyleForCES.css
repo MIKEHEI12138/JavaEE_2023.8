@@ -6,13 +6,14 @@ body {
     margin: 0; /* 去除页面默认的外边距 */
     display: flex; /* 使用弹性布局 */
     flex-direction: row; /* 将主体内容水平排列 */
+    background-color: #ffff00;
 }
 
 #sidebar {
     width: 20%; /* 设置侧栏的宽度 */
     min-width: 250px; /* 添加最小宽度，以防止侧栏过窄 */
     height: 100vh; /* 设置侧栏高度为视口高度 */
-    background-color: #f0f0f0; /* 设置侧栏的背景颜色 */
+    background-color: #212121; /* 设置侧栏的背景颜色 */
     padding: 0; /* 设置侧栏的内边距 */
     /* overflow-y: auto; 添加垂直滚动条，以防止内容溢出时出现滚动条 */
 }
@@ -24,7 +25,7 @@ body {
 }
 
 #top-bar {
-    background-color: #00ff00;
+    background-color: #212121;
     display: flex; /* 使用弹性布局，将顶部栏的内容水平排列 */
     height: 15vh;
     justify-content: space-between; /* 将顶部栏的内容分散对齐，左右对齐 */
@@ -37,56 +38,56 @@ body {
 #login-btn,
 #register-btn {
     padding: 5px 10px; /* 设置登录和注册按钮的内边距 */
-    background-color: #007bff; /* 设置按钮的背景颜色 */
+    background-color: #e02222; /* 设置按钮的背景颜色 */
     color: #fff; /* 设置按钮的文本颜色为白色 */
     border: none; /* 去除按钮的边框 */
     cursor: pointer; /* 将鼠标悬停在按钮上时显示手型光标 */
 }
 
-    #image-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-        overflow-y: scroll;
-        height: 80vh;
-    }
+#image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    overflow-y: scroll;
+    height: 80vh;
+}
 
-    .image {
-        height: 400px;
-        width: 300px;
-        background-color: #ddd;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        overflow: hidden;
-    }
+.image {
+    height: 400px;
+    width: 300px;
+    background-color: #ddd;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
 
-    .image img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-    }
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
 
-    .image-description {
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        width: 100%;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif; /* 自定义字体 */
-        font-size: 14px; /* 自定义字体大小 */
-    }
+.image-description {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* 自定义字体 */
+    font-size: 14px; /* 自定义字体大小 */
+}
 
-    /* 自定义描述容器样式 */
-    .custom-description {
-        background-color: #3498db; /* 自定义背景颜色 */
-        color: #fff; /* 自定义文字颜色 */
-        font-size: 16px;
-        padding: 15px;
-        font-family: 'Helvetica', sans-serif;
-    }
+/* 自定义描述容器样式 */
+.custom-description {
+    background-color: #ff9797; /* 自定义背景颜色 */
+    color: #fff; /* 自定义文字颜色 */
+    font-size: 16px;
+    padding: 15px;
+    font-family: 'Helvetica', sans-serif;
+}
 
 
 #navigation {
@@ -99,7 +100,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     padding: 10px; /* 添加内边距以增加点击区域 */
-    transition: background-color 0.3s; /* 添加颜色渐变过渡效果 */
+    transition: background-color 0.2s; /* 添加颜色渐变过渡效果 */
 }
 
 .sublinks {
@@ -122,19 +123,25 @@ body {
 
 /* 鼠标悬停时导航选项的背景颜色变化 */
 .nav-option:hover {
-    background-color: #9797ff; /* 更改背景颜色 */
+    background-color: #e02222; /* 更改背景颜色 */
 }
 
 /* 鼠标悬停时子链接的背景颜色变化 */
 .sublinks a:hover {
-    background-color: #aa22cc; /* 更改背景颜色 */
+    background-color: #eeeeee; /* 更改背景颜色为黄色 */
+}
+
+/* 设置子链接间的间距 */
+.sublinks li {
+    margin-top: 0px; /* 增加1px的间距 */
 }
 
 /* 设置不同层级的子链接的不同背景颜色 */
 .sublinks:nth-child(odd) a {
-    background-color: #ff9797; /* 浅灰色背景 */
+    background-color: #a5f0f0; /* 浅灰色背景 */
 }
 
 .sublinks:nth-child(even) a {
-    background-color: #a5f0f0; /* 更深的灰色背景 */
+    background-color: #ff9797; /* 更深的灰色背景 */
 }
+
