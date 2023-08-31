@@ -101,36 +101,14 @@
                 餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
         </div>
-        <div class="image">
-            <img src="https://img.zcool.cn/community/0174b45e783742a80120a8953780ea.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100/format,webp" alt="Image 9">
-            <div class="image-description">
-                餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-        <div class="image">
-            <img src="https://img.zcool.cn/community/0174b45e783742a80120a8953780ea.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100/format,webp" alt="Image 10">
-            <div class="image-description">
-                餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-        <div class="image">
-            <img src="https://img.zcool.cn/community/0174b45e783742a80120a8953780ea.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100/format,webp" alt="Image 11">
-            <div class="image-description">
-                餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
-        <div class="image">
-            <img src="https://img.zcool.cn/community/0174b45e783742a80120a8953780ea.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/quality,q_100/format,webp" alt="Image 12">
-            <div class="image-description">
-                餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
-        </div>
 
     </div>
     <div class="pagination">
         <button class="prev-btn">上一页</button>
+        <span class="page-info">共 <span class="total-pages">totalPages</span> 页</span><!-- 替换 10 为实际页数(后面用一个JavaScript) -->
         <button class="next-btn">下一页</button>
     </div>
+
 
 </div>
 
@@ -164,8 +142,13 @@
     // 每隔一秒更新一次时间
     setInterval(updateDateTime, 1000);
 
-//图片长宽比例计算
-
+//储存页数
+    // totalPages 存储了总页数
+    const totalPages = 100; // 替换为实际的总页数
+    // 选择 .page-info 元素
+    const pageInfoElement = document.querySelector('.page-info');
+    // 更新页面信息文本
+    pageInfoElement.textContent = `共 ${totalPages} 页`;
 
 
 </script>
