@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>注册</title>
+	<link rel="stylesheet" href="styles.css"> <!-- 与制定好的css样式进行链接，登录和注册的HTML使用同一样式文件-->
+</head>
+
+<body>
+	<div class="header wrapfix">
+		<div class="help">
+			<a>您好，欢迎登录北邮餐饮评价系统！</a>
+			<a href="login.html">登录</a> |
+			<a href="register.html">注册</a>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="wrap">
+		<div class="header wrapfix">
+			<img src="logo.jpg" alt="Logo" width="75" height="75" />
+		</div>
+		<div class="login-form">
+			<form name="form2" action="index_do.php" method="post" onSubmit="return checkSubmit();">
+				<dl>
+					<dd>您的姓名：
+						<input name="uname" type="text" class="log-input" required />
+					</dd>
+
+					<dd>用 户 名：
+						<input name="userid" type="text" class="log-input" onchange="TestUserOk()" required />
+					</dd>
+
+					<dd>手机号码：
+						<input name="phonenum" type="text" class="log-input" required />
+					</dd>
+
+					<dd>电子邮箱：
+						<input name="email" type="email" class="log-input" required />
+					</dd>
+
+					<dd>登陆密码：
+						<input name="userpwd" type="password" class="log-input" required />
+					</dd>
+
+					<dd>重复密码：
+						<input name="userpwdok" type="password" class="log-input" required />
+					</dd>
+
+					<dd>证件号码：
+						<input name="idnum" type="text" class="log-input" required />
+					</dd>
+
+					<dd>
+						<input type="submit" name="Submit2" value="确定注册" class="btn" />
+						<input type="reset" name="Submit22" value="重置" class="btn">
+					</dd>
+				</dl>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
