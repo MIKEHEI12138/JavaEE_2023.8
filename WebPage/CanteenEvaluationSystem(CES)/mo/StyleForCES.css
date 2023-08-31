@@ -26,6 +26,8 @@ body {
 
 #top-bar {
     background-color: #212121;
+    color: #ff9797;
+
     display: flex; /* 使用弹性布局，将顶部栏的内容水平排列 */
     height: 15vh;
     justify-content: space-between; /* 将顶部栏的内容分散对齐，左右对齐 */
@@ -33,7 +35,11 @@ body {
     padding: 10px 0; /* 设置顶部栏的内边距，上下各 10px */
     border-bottom: 1px solid #ccc; /* 在顶部栏底部添加 1px 灰色边框 */
     margin-bottom: 5px; /* 在主内容区的左侧添加5px的外边距 */
+
+    font-family: "楷体", sans-serif; /* 使用宋体字体 */
+    font-size: 20px; /* 调整字体大小为16px，根据需要进行调整 */
 }
+
 
 #login-btn,
 #register-btn {
@@ -93,29 +99,38 @@ body {
 #navigation {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 1px;
 }
 
 .nav-option {
     font-weight: bold;
     cursor: pointer;
-    padding: 10px; /* 添加内边距以增加点击区域 */
+    margin-left: 10px;
+    padding: 5px; /* 添加内边距以增加点击区域 */
     transition: background-color 0.2s; /* 添加颜色渐变过渡效果 */
+    color: whitesmoke;
 }
 
 .sublinks {
-    margin-left: 0px;
+    margin-left: 1px;
     list-style: none;
-    padding: 0;
+    padding: 1px;
 }
 
-.sublinks li {
-    margin-top: 0px;
-}
-
+/* 设置二级导航栏字的颜色为绿色 */
 .sublinks a {
     text-decoration: none;
-    color: #333;
+    color: whitesmoke; /* 设置字的颜色为绿色 */
+    transition: background-color 0.2s; /* 添加颜色渐变过渡效果 */
+    display: block;
+    margin-left: 0px;
+    padding: 5px; /* 添加内边距以增加点击区域 */
+}
+
+/* 设置三级导航栏字的颜色为蓝色 */
+.sublinks li a {
+    text-decoration: none;
+    color: blue; /* 设置字的颜色为蓝色 */
     transition: background-color 0.3s; /* 添加颜色渐变过渡效果 */
     display: block;
     padding: 5px; /* 添加内边距以增加点击区域 */
@@ -128,20 +143,19 @@ body {
 
 /* 鼠标悬停时子链接的背景颜色变化 */
 .sublinks a:hover {
-    background-color: #eeeeee; /* 更改背景颜色为黄色 */
+    background-color: #ff9797; /* 更改背景颜色为黄色 */
 }
 
 /* 设置子链接间的间距 */
 .sublinks li {
-    margin-top: 0px; /* 增加1px的间距 */
+    margin-top: 1px; /* 增加1px的间距 */
 }
 
 /* 设置不同层级的子链接的不同背景颜色 */
 .sublinks:nth-child(odd) a {
-    background-color: #a5f0f0; /* 浅灰色背景 */
+    background-color: #ff9797; /* 浅灰色背景 */
 }
 
 .sublinks:nth-child(even) a {
-    background-color: #ff9797; /* 更深的灰色背景 */
+    background-color: #3D3D3D; /* 更深的灰色背景 */
 }
-
