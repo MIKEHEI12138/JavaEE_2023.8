@@ -1,0 +1,55 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* 为其它的元素添加对应的颜色样式等 */
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: right;
+}
+
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.login-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.log-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
