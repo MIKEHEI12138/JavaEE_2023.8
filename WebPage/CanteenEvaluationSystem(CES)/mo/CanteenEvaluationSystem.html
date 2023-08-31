@@ -46,7 +46,6 @@
                 <button id="login-btn">登录</button>
                 <button id="register-btn">注册</button>
             </div>
-
         </div>
     </div>
     <div class="search-bar">
@@ -128,9 +127,15 @@
         </div>
 
     </div>
+    <div class="pagination">
+        <button class="prev-btn">上一页</button>
+        <button class="next-btn">下一页</button>
+    </div>
+
 </div>
 
 <script>
+//导航栏隐藏子选项
     function toggleSublinks(option) {
         const sublinks = document.getElementById(`sublinks-${option}`);
         if (sublinks.style.display === 'none') {
@@ -140,6 +145,8 @@
         }
     }
 
+
+//当前时间生成函数
     function updateDateTime() {
         var currentDate = new Date();
         var year = currentDate.getFullYear();
@@ -152,11 +159,14 @@
         var dateTimeString = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
         document.getElementById('currentDateTime').textContent = dateTimeString;
     }
-
     // 更新时间
     updateDateTime();
     // 每隔一秒更新一次时间
     setInterval(updateDateTime, 1000);
+
+//图片长宽比例计算
+
+
 
 </script>
 </body>
