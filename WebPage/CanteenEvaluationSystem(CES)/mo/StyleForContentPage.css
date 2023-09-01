@@ -1,0 +1,68 @@
+#mid-content-column{
+    flex:1;
+    padding: 0px;
+}
+
+#contentpage{
+    font-family: Arial, sans-serif; /* 设置整个页面的字体 */
+    flex-direction: column; /* 将主体内容垂直排列 */
+    background-color: #e0e0e0;
+}
+
+#main-contentpage{
+    font-family: Arial, sans-serif; /* 设置整个页面的字体 */
+    display: flex; /* 使用弹性布局 */
+    flex-direction: row; /* 将内容水平排列 */
+    /*background-color: #e0e0e0;*/
+}
+
+.content-column {
+    float: left;
+}
+   
+  /* 左右侧栏的宽度 */
+.content-column-left {
+    width: 25%;
+}
+   
+  /* 中间列宽度 */
+.content-column-middle {
+    width: 25%;
+}
+
+.content-column-right {
+    width: 50%;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+ #Point{
+    font-size:xx-large;
+    color:rgb(255, 197, 6);
+    box-shadow:black;
+ }
+
+ .reply-box-textarea{
+    display: flex;
+    resize: none;
+    width: 80%;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #53a3ff;
+    border-radius: 5px;
+ }
+
+ .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position:relative;
+}

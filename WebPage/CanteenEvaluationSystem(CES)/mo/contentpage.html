@@ -1,78 +1,123 @@
 <!DOCTYPE html>
+
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ContentPage</title><!--   此标题内容后边需要用js从后端获取!!   8.31-->
-        <link rel="stylesheet" href="StyleForCES.css"> <!--这一行是用来调用StyleForCES.css文件的 --><!--部分组件直接复用，保持统一风格-->
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContentPage</title><!--   此标题内容后边需要用js从后端获取!!   8.31-->
+    <link rel="stylesheet" href="StyleForCES.css"> <!--这一行是用来调用StyleForCES.css文件的 --><!--部分组件直接复用，保持统一风格-->
+    <link rel="stylesheet" href="StyleForContentPage.css">
+</head>
+
 </html>
-<div id="main-content">
-    <div id="top-bar">
-        <div class="topbar-left">
-            <a href="https://www.bupt.edu.cn/">
-                <img src="https://www.bupt.edu.cn/images/logo.png" alt="图标">
-            </a>
-            <h1>餐饮评价系统</h1>
-        </div>
-        <div class="topbar-right">
-            <div class="login-register">
-                <button id="login-btn">登录</button>
-                <button id="register-btn">注册</button>
+
+<body id="contentpage">
+    <div id="main-content">
+        <div id="top-bar">
+            <div class="topbar-left">
+                <a href="https://www.bupt.edu.cn/">
+                    <img src="https://www.bupt.edu.cn/images/logo.png" alt="图标">
+                </a>
+                <h1>餐饮评价系统</h1>
+            </div>
+            <div class="topbar-right">
+                <div class="login-register">
+                    <button id="login-btn">登录</button>
+                    <button id="register-btn">注册</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="mid-content-column">
-    <div id="content-background"><!--背景色-->
+    <div id="main-contentpage">
+        <div class="content-column-left">
 
-        <div id="Title">
-            <h1>这是一个标题</h1><!--   此标题内容后边需要用js从后端获取!!   8.31-->
+            <!--   此处需要放一个返回主页按钮   8.31-->
         </div>
 
-        <div id="Main-image">
-            <a href="">
-                <img src="https://img.zcool.cn/community/0174b45e783742a80120a8953780ea.jpg" title="图片"><!--   此内容后边需要用js从后端获取!!   8.31-->
-            </a>
-        </div>
+        <div class="content-column">
+            <div class="card"><!--背景色-->
 
-        <div id="introduction">
-            <p>餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sitpiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+                <div class="card" id="content">
 
-        <div id="comment-region">
-            <!--  需要一个输入框和一个发送按钮以及评分按钮（1~5）!!   8.31-->
-        </div>
+                    <div id="Title">
+                        <h1>这是一个标题</h1><!--   此标题内容后边需要用js从后端获取!!   8.31-->
+                    </div>
 
-        <div id="comment-content-region">
-            <div class="comment"><!--一个评论的样式--><!--   此内容后边需要用js从后端获取!!   8.31-->
+                    <div class="image">
+                        <a href="">
+                            <img src="https://img.zcool.cn/community/0174b45e783742a80120a8953780ea.jpg"
+                                title="图片"><!--   此内容后边需要用js从后端获取!!   8.31-->
+                        </a>
+                    </div>
 
-                <div class="username">
-                    
+                    <div id="introduction">
+                        <p>餐馆介绍(这个地方从数据库调):Lorem ipsum dolor sitpiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et
+                            dolore magna aliqua.</p>
+                    </div>
                 </div>
 
-                <div class="comment-content">
+                <div id="comment-region">
+                    <div class="card">
+                        <h1>发表评价</h1>
+                        <h2>评价分数</h2>
+                        <!--此处需要一个评分按钮-->
+                        <div class="reply-box-warp">
+                            <textarea class="reply-box-textarea" placeholder="这里是评论区，不是无人区;-)"></textarea>
+                        </div>
+                        <input type="submit" name="Submit" value="发送评价" class="btn" />
+                    </div>
+                    <!--  需要一个输入框和一个发送按钮以及评分按钮（1~5）!!   8.31-->
+                </div>
+
+                <div id="comment-content-region">
+                    <div class="card">
+                        <div class="comment"><!--一个评论的样式--><!--   此内容后边需要用js从后端获取!!   8.31-->
+
+                            <div class="username">
+                                    <h2>我是一个用户名</h2>
+                            </div>
+
+                            <div class="stars">
+                                    <h3>评价分数:4</h3>
+                            </div>
+
+                            <div class="comment-content">
+                                    <p>我最近光顾了一家中式餐厅，对于这次的用餐体验我有一些评价。首先，餐厅的装修风格非常具有中国传统文化的特色，墙上挂满了中国字画和古代器物，增添了一种古典雅致的氛围。这让我觉得非常舒适和放松。
+
+                                        其次，餐厅的服务态度非常好。服务员们热情友好，迅速为我提供了菜单并解答了我所有的问题。他们对于菜品的介绍非常详细，还向我推荐了一些特色菜。在整个用餐过程中，我的需求得到了及时的满足，这让我感到非常满意。
+                                        
+                                        关于菜品，餐厅提供了广泛的选择，包括各种经典的中式菜肴。我点了几道菜来品尝，它们的味道非常地道，口感也很不错。菜品的摆盘精美，色香味俱佳。我尤其喜欢他们的糖醋排骨和宫保鸡丁，这些经典菜品都烹饪得非常到位。
+                                        
+                                        最后，价格方面，这家中式餐厅的价格相对合理。考虑到餐厅提供的高质量食材和服务，我认为所花费的费用是物有所值的。
+                                        
+                                        综合来说，我对这家中式餐厅的评价是非常积极的。它提供了舒适的环境、优质的服务和美味的菜品，符合我对于一家中式餐厅的期望。我会向朋友们推荐这家餐厅。</p>
+                            </div>
+
+                            <div class="comment-time">
+                                <p id="time">发布于2023-09-01 14:41</p>
+                            </div>
+
+                            
+                        </div>
+                    </div>
 
                 </div>
 
-                <div class="comment-time">
-
-                </div>
-
-                <div class="stars">
-
-                </div>
             </div>
         </div>
 
+
+
+        <div class="content-column-right">
+            <div class="card">
+                <!--   此处需要放一个目前平均评分值以及评价总人数   8.31-->
+                <h1 id="PointTitle">评分</h1>
+                <h2 id="Point">2.5</h2>
+            </div>
+
+        </div>
     </div>
-</div>
-
-<div id="left-content-column">
-    <!--   此处需要放一个返回主页按钮   8.31-->
-</div>
-
-<div id="right-content-column">
-    <!--   此处需要放一个目前平均评分值以及评价总人数   8.31-->
-</div>
+</body>
