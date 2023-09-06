@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>前端与服务器交互示例</title>
 </head>
-
 <body>
-    <p>Qiu</p>
-</body>
+<button id="fetchButton">点击发送请求</button>
+<div id="responseArea"></div>
 
+<script>
+    // 获取按钮元素
+    const fetchButton = document.getElementById('fetchButton');
+    // 获取响应区域元素
+    const responseArea = document.getElementById('responseArea');
+
+    // 添加按钮点击事件处理程序
+    fetchButton.addEventListener('click', () => {
+        // 使用Fetch API发送GET请求到服务器的Servlet
+        fetch('/myservlet')
+            .then(response => response.text())
+            .then(data => {
+                // 将服务器响应显示在页面上
+                responseArea.innerHTML = '服务器响应：' + data;
+            })
+            .catch(error => {
+                console.error('发生错误：', error);
+            });
+    });
+</script>
+</body>
 </html>
