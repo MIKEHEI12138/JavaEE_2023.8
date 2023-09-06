@@ -26,4 +26,22 @@ public class UserController {
         return "user";
 
     }
+
+
+    @RequestMapping("/toadduser")
+    public String toAddUser() {
+        return "adduser";
+    }
+
+    @RequestMapping("/adduser")
+    public String addPaper(User user) {
+        user.setUserID(666);
+        userService.insertUser(user);
+        return "redirect:/index";
+    }
+
+    @RequestMapping("/index")
+    public String Index() {
+        return "index";
+    }
 }
