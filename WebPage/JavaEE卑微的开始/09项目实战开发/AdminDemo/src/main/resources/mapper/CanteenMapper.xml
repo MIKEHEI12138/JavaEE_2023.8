@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qiu.dao.CanteenMapper">
+
+    <resultMap id="BaseResultMap" type="com.qiu.entity.Canteen">
+        <id column="CanteenID" property="canteenID" jdbcType="INTEGER"/>
+        <result column="RestaurantName" property="restaurantName" jdbcType="VARCHAR"/>
+        <result column="Floors" property="floors" jdbcType="INTEGER"/>
+        <result column="Description" property="description" jdbcType="VARCHAR"/>
+        <result column="ImagePath" property="imagePath" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!-- 其他操作的SQL语句... -->
+    <select id="getCanteenByID" resultMap="BaseResultMap">
+        SELECT * FROM Canteen WHERE CanteenID = #{canteenID}
+    </select>
+
+</mapper>

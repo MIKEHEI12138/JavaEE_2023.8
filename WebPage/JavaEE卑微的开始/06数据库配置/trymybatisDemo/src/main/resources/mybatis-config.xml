@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis配置环境-->
+
+<configuration>
+    <!--实体类包的位置-->
+    <typeAliases>
+        <package name="com.qiu.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--选择mysql-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <!--分别设置数据库位置、账号和密码-->
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/canteensystem?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="qiu123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <!--Mapper的存放位置-->
+    <mappers>
+        <mapper resource="com/qiu/dao/UserMapper.xml"/>
+    </mappers>
+</configuration>

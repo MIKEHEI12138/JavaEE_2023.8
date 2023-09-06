@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qiu.dao.UserMapper">
+    <!-- 查询用户信息 -->
+    <select id="getUserById" resultType="com.qiu.pojo.User">
+        SELECT *
+        FROM canteensystem.user
+        WHERE UserID = #{userID}
+    </select>
+
+    <!-- 插入用户信息 -->
+    <insert id="insertUser" parameterType="com.qiu.pojo.User">
+        INSERT INTO canteensystem.user (Nickname, Gender, Grade, StudentID, Password, Phone, Email)
+        VALUES (#{nickname}, #{gender}, #{grade}, #{studentID}, #{password}, #{phone}, #{email})
+    </insert>
+
+    <!-- 更新用户信息 -->
+    <update id="updateUser" parameterType="com.qiu.pojo.User">
+        UPDATE canteensystem.user
+        SET Nickname  = #{nickname},
+            Gender    = #{gender},
+            Grade     = #{grade},
+            StudentID = #{studentID},
+            Password  = #{password},
+            Phone     = #{phone},
+            Email     = #{email}
+        WHERE UserID = #{userID}
+    </update>
+
+    <!-- 删除用户信息 -->
+    <delete id="deleteUser" parameterType="int">
+        DELETE
+        FROM canteensystem.user
+        WHERE UserID = #{userID}
+    </delete>
+
+    <!-- 查询所有用户信息 -->
+    <select id="getAllUsers" resultType="com.qiu.pojo.User">
+        SELECT *
+        FROM canteensystem.user
+    </select>
+</mapper>

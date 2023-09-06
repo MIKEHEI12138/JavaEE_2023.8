@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis配置环境-->
+<configuration>
+    <!-- 设置全局配置，如是否开启缓存、是否使用延迟加载等 -->
+    <settings>
+        <!-- 是否启用驼峰命名规则转换，如将数据库列名 username 转为 Java 属性名 username -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 是否开启二级缓存 -->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- 更多全局配置... -->
+    </settings>
+
+    <!-- 设置类型别名，用于简化结果集映射的配置 -->
+    <typeAliases>
+        <!-- 指定实体类的包路径 -->
+        <package name="com.qiu.entity"/>
+    </typeAliases>
+
+    <!-- 配置数据源信息 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!-- 配置数据源，这里使用了连接池数据源 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/CanteenSystem?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="qiu123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 加载映射文件 -->
+    <mappers>
+        <!-- 使用 classpath: 前缀来指定映射文件的路径，这里假设映射文件在 resources/mapper 目录下 -->
+        <mapper resource="mapper/AdminMapper.xml"/>
+        <mapper resource="mapper/CanteenMapper.xml"/>
+        <mapper resource="mapper/FoodStallsMapper.xml"/>
+        <mapper resource="mapper/CommentMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml"/>
+
+        <!-- 添加其他映射文件... -->
+    </mappers>
+</configuration>

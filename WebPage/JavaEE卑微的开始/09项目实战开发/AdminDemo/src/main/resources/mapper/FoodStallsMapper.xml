@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qiu.dao.FoodStallsMapper">
+
+    <resultMap id="BaseResultMap" type="com.qiu.entity.FoodStalls">
+        <id column="foodStallsID" property="foodStallsID" jdbcType="INTEGER"/>
+        <result column="CanteenID" property="canteenID" jdbcType="INTEGER"/>
+        <result column="Floor" property="floor" jdbcType="INTEGER"/>
+        <result column="StallName" property="stallName" jdbcType="VARCHAR"/>
+        <result column="StallDescription" property="stallDescription" jdbcType="VARCHAR"/>
+        <result column="ImagePath" property="imagePath" jdbcType="VARCHAR"/>
+        <result column="TotalScore" property="totalScore" jdbcType="DOUBLE"/>
+        <result column="RatingCount" property="ratingCount" jdbcType="INTEGER"/>
+        <result column="AverageScore" property="averageScore" jdbcType="DOUBLE"/>
+        <result column="LastUpdateTime" property="lastUpdateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!-- 其他操作的SQL语句... -->
+    <select id="getFoodStallsByID" resultMap="BaseResultMap">
+        SELECT * FROM FoodStalls WHERE foodStallsID = #{foodStallsID}
+    </select>
+</mapper>

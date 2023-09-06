@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis配置环境-->
+
+<configuration>
+    <!--实体类包的位置-->
+    <typeAliases>
+        <package name="com.qiu.pojo"/>
+    </typeAliases>
+
+    <!--Mapper的存放位置-->
+    <mappers>
+        <mapper class="com.qiu.dao.UserMapper"/>
+    </mappers>
+    
+</configuration>
