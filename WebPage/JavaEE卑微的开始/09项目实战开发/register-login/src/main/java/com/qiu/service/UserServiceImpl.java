@@ -2,42 +2,35 @@ package com.qiu.service;
 
 import com.qiu.dao.UserMapper;
 import com.qiu.pojo.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class UserServiceImpl implements UserService {
-    private final UserMapper userMapper;
 
-    @Autowired
-    public UserServiceImpl(UserMapper userMapper) {
-        this.userMapper = userMapper;
+    //调用dao层的操作，设置一个set接口，方便Spring管理
+    private UserMapper UserMapper;
+
+    public void setUserMapper(UserMapper UserMapper) {
+        this.UserMapper = UserMapper;
     }
 
-    @Override
-    public User getUserById(int userID) {
-        return userMapper.getUserById(userID);
-    }
-
-    @Override
     public void insertUser(User user) {
-        userMapper.insertUser(user);
+        UserMapper.insertUser(user);
     }
 
-    @Override
-    public void updateUser(User user) {
-        userMapper.updateUser(user);
+    public void deleteUser(int id) {
+        UserMapper.deleteUser(id);
     }
 
-    @Override
-    public void deleteUser(int userID) {
-        userMapper.deleteUser(userID);
+    public void updateUser(User User) {
+        UserMapper.updateUser(User);
     }
 
-    @Override
+    public User getUserById(int id) {
+        return UserMapper.getUserById(id);
+    }
+
     public List<User> getAllUsers() {
-        return userMapper.getAllUsers();
+        return UserMapper.getAllUsers();
     }
 }

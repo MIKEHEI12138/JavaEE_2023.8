@@ -42,4 +42,6 @@
         SELECT *
         FROM canteensystem.user
     </select>
+
+
 </mapper>

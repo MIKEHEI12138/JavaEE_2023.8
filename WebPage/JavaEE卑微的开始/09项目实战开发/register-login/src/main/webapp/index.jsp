@@ -1,12 +1,30 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+    <title>首页</title>
+    <style type="text/css">
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        h3 {
+            width: 180px;
+            height: 38px;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 38px;
+            background: deepskyblue;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+
+<h3>
+    <a href="${pageContext.request.contextPath}/user">点击进入user</a>
+</h3>
 </body>
 </html>
